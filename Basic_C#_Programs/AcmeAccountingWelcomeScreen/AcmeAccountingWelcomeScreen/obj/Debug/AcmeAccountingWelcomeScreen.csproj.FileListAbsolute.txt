@@ -1,0 +1,6 @@
+C:\Users\ywing\Desktop\Basic_C#_Programs\AcmeAccountingWelcomeScreen\AcmeAccountingWelcomeScreen\bin\Debug\AcmeAccountingWelcomeScreen.exe.config
+C:\Users\ywing\Desktop\Basic_C#_Programs\AcmeAccountingWelcomeScreen\AcmeAccountingWelcomeScreen\bin\Debug\AcmeAccountingWelcomeScreen.exe
+C:\Users\ywing\Desktop\Basic_C#_Programs\AcmeAccountingWelcomeScreen\AcmeAccountingWelcomeScreen\bin\Debug\AcmeAccountingWelcomeScreen.pdb
+C:\Users\ywing\Desktop\Basic_C#_Programs\AcmeAccountingWelcomeScreen\AcmeAccountingWelcomeScreen\obj\Debug\AcmeAccountingWelcomeScreen.csproj.CoreCompileInputs.cache
+C:\Users\ywing\Desktop\Basic_C#_Programs\AcmeAccountingWelcomeScreen\AcmeAccountingWelcomeScreen\obj\Debug\AcmeAccountingWelcomeScreen.exe
+C:\Users\ywing\Desktop\Basic_C#_Programs\AcmeAccountingWelcomeScreen\AcmeAccountingWelcomeScreen\obj\Debug\AcmeAccountingWelcomeScreen.pdb
