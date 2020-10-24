@@ -1,9 +1,9 @@
 ﻿using System;
 
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
         try
         {
             Console.WriteLine("Pick a number.");
@@ -17,8 +17,21 @@
         }
         catch (FormatException ex)
         {
+            //Console.WriteLine(ex.Message);
+            Console.WriteLine("Please type a whole number");
+            return;
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine("Please don't divide by zero");
+        }
+        catch (Exception ex)
+        {
             Console.WriteLine(ex.Message);
         }
-        Console.ReadLine();
+        finally
+        {
+                Console.ReadLine();
         }
     }
+        
