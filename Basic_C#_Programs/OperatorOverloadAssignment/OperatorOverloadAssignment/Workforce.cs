@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyOne
+namespace OperatorOverloadAssignment
 {
-    interface IWalkAway
+    public class Workforce
     {
-        void WalkAway(Player player);
-
+        public List<Employee> Employees { get; set; }
     }
 }
