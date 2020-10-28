@@ -24,16 +24,21 @@ namespace LamdaFunctionsAssignment
                 Employee.CreateEmployee("Joe", "Wyoming", 10)
         };
 
+            List<Employee> joeList = new List<Employee>();
             foreach (Employee employee in employeeList)
             {
                 if (employee.firstName == "Joe")
                 {
-                    Console.WriteLine(employee.firstName + " " + employee.lastName);
+                    joeList.Add(employee);
                 }
             }
+            foreach (Employee joe in joeList)
+            {
+                Console.WriteLine(joe.firstName + " " + joe.lastName);
+            }
 
-            List<Employee> newList = employeeList.Where(x => x.Id > 5).ToList();
-            foreach (Employee person in newList)
+            List<Employee> idList = employeeList.Where(x => x.Id > 5).ToList();
+            foreach (Employee person in idList)
             {
                 Console.WriteLine(person.firstName + " " + person.lastName);
             }
