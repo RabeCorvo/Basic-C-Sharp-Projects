@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewletterAppMVC
+namespace CarInsurance.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NewsletterEntities : DbContext
+    public partial class InsuranceEntities : DbContext
     {
-        public NewsletterEntities()
-            : base("name=NewsletterEntities")
+        public InsuranceEntities()
+            : base("name=InsuranceEntities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace NewletterAppMVC
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<SignUp> SignUps { get; set; }
+        public virtual DbSet<Insuree> Insurees { get; set; }
     }
 }

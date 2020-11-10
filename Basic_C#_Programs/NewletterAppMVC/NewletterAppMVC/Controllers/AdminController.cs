@@ -1,4 +1,5 @@
-﻿using NewletterAppMVC.ViewModels;
+﻿using NewletterAppMVC.Models;
+using NewletterAppMVC.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,15 @@ namespace NewletterAppMVC.Controllers
         {
             using (NewsletterEntities db = new NewsletterEntities())
             {
-                var signups = db.SignUps;
+                //var signups = db.SignUps.Where(x => x.Removed == null).ToList();  //This lamda achieves the same result as the code below.  
+                var signups = (from c in db.SignUps                                 //This is link syntax that acheive the same result as the code above.
+                               where c.Removed == null
+                               select c).ToList();
                 var signupVms = new List<SignupVm>();
                 foreach (var signup in signups)
                 {
                     var signupVm = new SignupVm();
+                    signupVm.Id = signup.Id;
                     signupVm.FirstName = signup.FirstName;
                     signupVm.LastName = signup.LastName;
                     signupVm.EmailAddress = signup.EmailAddress;
@@ -27,6 +32,17 @@ namespace NewletterAppMVC.Controllers
 
                 return View(signupVms);
             }
+        }
+
+        public ActionResult Unsubscribe(int Id)
+        {
+            using (NewsletterEntities db = new NewsletterEntities())
+            {
+                var signup = db.SignUps.Find(Id);
+                signup.Removed = DateTime.Now;
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
     }
 }
