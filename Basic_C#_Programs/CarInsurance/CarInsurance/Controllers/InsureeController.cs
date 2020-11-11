@@ -50,6 +50,7 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                GenerateQuote(insuree);
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,6 +83,7 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                GenerateQuote(insuree);
                 db.Entry(insuree).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -139,60 +141,52 @@ namespace CarInsurance.Controllers
         //    }
         //}
 
-        public ActionResult GenerateQuote(int Id)
+        public void GenerateQuote(Insuree insuree)
         {
             decimal quote = 50.00m;
-            using (InsuranceEntities db = new InsuranceEntities())
+            int age = DateTime.Now.Year - insuree.DateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < insuree.DateOfBirth.DayOfYear)
             {
-                var client = db.Insurees.Find(Id);
-                //int age = CalculateAge(Id);
-                var insuree = db.Insurees.Find(Id);
-                int age = DateTime.Now.Year - insuree.DateOfBirth.Year;
-                if (DateTime.Now.DayOfYear < insuree.DateOfBirth.DayOfYear)
-                {
-                    age -= 1;
-                }
-                if (age <= 18)
-                {
-                    quote += 100m;
-                }
-                else if (age > 18 && age < 26)
-                {
-                    quote += 50m;
-                }
-                else
-                {
-                    quote += 25m;
-                }
-                if (client.CarYear < 2000 || client.CarYear > 2015)
-                {
-                    quote += 25m;
-                }
-                if (client.CarMake == "Porsche")
-                {
-                    quote += 25m;
-                }
-                if (client.CarMake == "Porsche" && client.CarModel == "911 Carrera")
-                {
-                    quote += 25m;
-                }
-                if (client.SpeedingTickets > 0)
-                {
-                    int ticketMultiplyer = client.SpeedingTickets * 10;
-                    quote = quote + ticketMultiplyer;
-                }
-                if (client.DUI == true)
-                {
-                    quote *= 1.25m;
-                }
-                if (client.CoverageType == true)
-                {
-                    quote *= 1.5m;
-                }
-                client.Quote = quote;
-                db.SaveChanges();
+                age -= 1;
             }
-            return RedirectToAction("Index");
+            if (age <= 18)
+            {
+                quote += 100m;
+            }
+            else if (age > 18 && age < 26)
+            {
+                quote += 50m;
+            }
+            else
+            {
+                quote += 25m;
+            }
+            if (insuree.CarYear < 2000 || insuree.CarYear > 2015)
+            {
+                quote += 25m;
+            }
+            if (insuree.CarMake == "Porsche")
+            {
+                quote += 25m;
+            }
+            if (insuree.CarMake == "Porsche" && insuree.CarModel == "911 Carrera")
+            {
+                quote += 25m;
+            }
+            if (insuree.SpeedingTickets > 0)
+            {
+                int ticketMultiplyer = insuree.SpeedingTickets * 10;
+                quote = quote + ticketMultiplyer;
+            }
+            if (insuree.DUI == true)
+            {
+                quote *= 1.25m;
+            }
+            if (insuree.CoverageType == true)
+            {
+                quote *= 1.5m;
+            }
+            insuree.Quote = quote;
         }
 
 
