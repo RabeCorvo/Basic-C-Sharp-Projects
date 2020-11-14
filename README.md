@@ -4,9 +4,9 @@ These are some small projcts I made using C# and .Net Framework
 
 Projects:
 
-Car Insurance
-TwentyOne
-Newsletter
+Car Insurance,
+TwentyOne,
+Newsletter,
 
 Car Insurance:
 This project is an MVC web application that mimics a car insurance website.  It takes user's input 
