@@ -1,7 +1,0 @@
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\obj\Debug\myConsolePorject.cs.csprojAssemblyReference.cache
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\obj\Debug\myConsolePorject.cs.csproj.CoreCompileInputs.cache
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\bin\Debug\myConsolePorject.cs.exe.config
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\bin\Debug\myConsolePorject.cs.exe
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\bin\Debug\myConsolePorject.cs.pdb
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\obj\Debug\myConsolePorject.cs.exe
-C:\Users\ywing\Desktop\Basic_C#_Programs\myConsolePorject.cs\myConsolePorject.cs\obj\Debug\myConsolePorject.cs.pdb
