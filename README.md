@@ -1,6 +1,6 @@
 C# Projects
 
-These are some small projects I made using C# and .Net Framework
+These are some projects I made using C# and .Net Framework
 
 Projects:
 
@@ -20,5 +20,5 @@ the user and a dealer and allows the player to decide how much to bet and whethe
 Newsletter:
 This is another MVC web application that mimics a newsletter signup page.  It utilizes a database
 first setup which saves user information to a local database and then returns the list of people
-on the newsletter mailing linst in an admin page.
+on the newsletter mailing list in an admin page.
 
