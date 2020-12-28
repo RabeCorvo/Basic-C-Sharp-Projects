@@ -1,6 +1,6 @@
 C# Projects
 
-These are some small projcts I made using C# and .Net Framework
+These are some small projects I made using C# and .Net Framework
 
 Projects:
 
